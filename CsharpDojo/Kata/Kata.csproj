@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>BanallyMe.CSharpDojo</AssemblyName>
+    <RootNamespace>BanallyMe.CSharpDojo</RootNamespace>
+    <Authors>BanallyMe</Authors>
+    <Version>0.0.1</Version>
+    <Description>The C# Dojo provides a codebase for effectivey training your C# skills. It provides a collection of trainings, which can be completed repeatedly to achieve a better routine in programming C#.</Description>
+    <Copyright>2021 BanallyMe</Copyright>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryUrl>https://github.com/BanallyMe/CSharpDojo</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+</Project>
