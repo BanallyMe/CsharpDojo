@@ -8,7 +8,7 @@ namespace BanallyMe.CSharpDojo.UnitTests.En.CheckDigits
     {
         [Theory]
         [InlineData("DE", "700901001234567890", "DE08700901001234567890")]
-        [InlineData("AT", "123451234567", "AT621234500001234567")]
+        [InlineData("AT", "1234500001234567", "AT621234500001234567")]
         public void IbanForCountryFromBban_GeneratesCorrectIban(string countryCode, string bban, string correctIban)
         {
             var generatedIban = IbanKata.IbanForCountryFromBban(countryCode, bban);
