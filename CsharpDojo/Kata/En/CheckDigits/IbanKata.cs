@@ -18,12 +18,13 @@ namespace BanallyMe.CSharpDojo.En.CheckDigits
         /// Building the IBAN includes the following steps:
         /// <list type="number">
         /// <item>The position for each letter of the country code in the latin alphabet is determined.</item>
-        /// <item>Each of the two positions is added to the number 9 => A would result in the number 10.</item>
+        /// <item>Each of the two positions is added to the number 9 => An 'A' would result in the number 10.</item>
         /// <item>The two results are concatenated, resulting in a 4-digit-string, the country number.</item>
         /// <item>Two zeros are appended to this country number.</item>
-        /// <item>The country number is appended to the BBAN.</item>
-        /// <item>The remainder of the division by 97 of this result is determined.</item>
-        /// <item>If the remainder is less than 10 a single zero gets prepended. The result ist the 2-digit-checksum of the IBAN.</item>
+        /// <item>The resulting number is appended to the BBAN.</item>
+        /// <item>The remainder of the division by 97 of that result is determined.</item>
+        /// <item>The remainder is subtracted from the number 98.</item>
+        /// <item>If the result of that subtraction is less than 10, a single zero gets prepended. The result ist the 2-digit-checksum of the IBAN.</item>
         /// <item>The IBAN is the concatenation of the two-letter country code, the checksum, and the BBAN.</item>
         /// </list>
         /// </remarks>
