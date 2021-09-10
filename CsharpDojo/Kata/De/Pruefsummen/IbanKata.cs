@@ -23,7 +23,8 @@ namespace BanallyMe.CSharpDojo.De.Pruefsummen
         /// <item>An die Ländernummer werden zwei Nullen angehängt.</item>
         /// <item>Die Ländernummer wird hinten an die BBAN angehängt.</item>
         /// <item>Die so entstandene Zahl wird durch 97 geteilt und der Rest dieser Division ermittelt.</item>
-        /// <item>Ist der Rest kleiner als 10, wird eine 0 vor den Rest angefügt. Das Ergebnis ist die zweistellige Prüfziffer der IBAN.</item>
+        /// <item>Der Rest wird von der Zahl 98 abgezogen.</item>
+        /// <item>Ist das Ergebnis kleiner als 10, wird eine 0 vor das Ergebnis angefügt. Die entstandene Zahl ist die zweistellige Prüfziffer der IBAN.</item>
         /// <item>Die IBAN ist die Verbindung des Ländercodes, der Prüfziffer und der BBAN.</item>
         /// </list>
         /// </remarks>
