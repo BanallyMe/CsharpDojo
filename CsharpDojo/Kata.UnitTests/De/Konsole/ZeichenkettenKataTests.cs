@@ -6,6 +6,7 @@ using Xunit;
 
 namespace BanallyMe.CSharpDojo.UnitTests.De.Konsole
 {
+    [Collection("console")]
     public class ZeichenkettenKataTests
     {
         private const string dojoDebugAusgabe = "Tisq\r\nTibsq\r\nTibsq.Epkp\r\nD.Tibsq.Epkp\r\nC-Sharp-Dojo\r\n";

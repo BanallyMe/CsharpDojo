@@ -1,15 +1,15 @@
-﻿using BanallyMe.CSharpDojo.De.Konsole;
+﻿using BanallyMe.CSharpDojo.En.ConsoleKata;
 using FluentAssertions;
 using System;
 using System.IO;
 using Xunit;
 
-namespace BanallyMe.CSharpDojo.UnitTests.De.Konsole
+namespace BanallyMe.CSharpDojo.UnitTests.En.ConsoleKata
 {
     [Collection("console")]
-    public class ZeichentabelleKataTests
+    public class CharacterMapKataTests
     {
-        private const string zeichentabellenAusschnitt = "33 -- 00100001 -- 21 -- !\r\n"
+        private const string characterMapSection = "33 -- 00100001 -- 21 -- !\r\n"
             + "34 -- 00100010 -- 22 -- \"\r\n"
             + "35 -- 00100011 -- 23 -- #\r\n"
             + "36 -- 00100100 -- 24 -- $\r\n"
@@ -43,19 +43,18 @@ namespace BanallyMe.CSharpDojo.UnitTests.De.Konsole
             + "64 -- 01000000 -- 40 -- @\r\n";
 
         [Fact]
-        public void DruckeZeichentabelle_ErzeugtKorrektenOutput()
+        public void PrintCharacterMap_GeneratesCorrectOutput()
         {
-            
-            using var konsoleAusgabe = new StringWriter();
-            var originalAusgabe = Console.Out;
-            Console.SetOut(konsoleAusgabe);
+            using var consoleOutput = new StringWriter();
+            var originalOutput = Console.Out;
+            Console.SetOut(consoleOutput);
 
-            ZeichentabelleKata.DruckeZeichentabelle();
-            var erzeugterOutput = konsoleAusgabe.ToString();
+            CharacterMapKata.PrintCharacterMap();
+            var generatedOutput = consoleOutput.ToString();
 
-            erzeugterOutput.Should().Be(zeichentabellenAusschnitt);
+            generatedOutput.Should().Be(characterMapSection);
 
-            Console.SetOut(originalAusgabe);
+            Console.SetOut(originalOutput);
         }
     }
 }

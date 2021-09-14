@@ -6,6 +6,7 @@ using Xunit;
 
 namespace BanallyMe.CSharpDojo.UnitTests.En.ConsoleKata
 {
+    [Collection("console")]
     public class FizzBuzzKataTests
     {
         private const string threeFiveFizzBuzzOutput =
